@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(mock)/mock/page.tsx", "app/(landingPage)/_components/Hero.jsx", "app/(landingPage)/page.jsx", "components/nav-bar/index.jsx", "components/dictaphone.jsx", "app/(mock)/mock/dashboard/layout.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(mock)/mock/page.tsx", "app/(landingPage)/_components/Hero.jsx", "app/(landingPage)/page.jsx", "components/nav-bar/index.jsx", "components/dictaphone.jsx", "app/(mock)/mock/dashboard/layout.tsx", "app/(mock)/mock/interview/[interviewId]/page.jsx", "app/(mock)/mock/interview/[interviewId]/feedback/page.hjsx"],
   "exclude": ["node_modules"]
 }

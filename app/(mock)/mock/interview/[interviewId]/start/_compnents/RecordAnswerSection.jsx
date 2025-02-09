@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 import useSpeechToText from "react-hook-speech-to-text";
 import { Mic, StopCircle } from "lucide-react";
 import { toast } from "sonner";
-import { chatSession } from "@/utils/GeminiAIModel";
-import { db } from "@/utils/db";
-import { UserAnswer } from "@/utils/schema";
+import { chatSession } from "@/configs/ai-models";
+import { db } from "@/db";
+import { UserAnswer } from "@/db/schema";
 import {
   LogoutLink,
   useKindeBrowserClient,

@@ -1,7 +1,7 @@
 "use client";  // Ensure this is client-side
 
-import { db } from "@/utils/db";
-import { MockInterview } from "@/utils/schema";
+import { db } from "@/db";
+import { MockInterview } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import React, { useEffect, useState } from "react";
 import QuestionsSections from "./_compnents/QuestionsSections";
