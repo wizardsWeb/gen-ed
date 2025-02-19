@@ -9,45 +9,47 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 const plans = [
   {
-    name: "Starter",
-    monthlyPrice: 499,
-    yearlyPrice: 4999,
-    description: "Perfect for small businesses and startups",
+    name: "Student",
+    monthlyPrice: "Free",
+    yearlyPrice: "Free",
+    description: "Perfect for individual learners",
     features: [
-      "Up to 5 team members",
-      "Basic project management tools",
-      "10 GB storage",
-      "Email support",
-      "Mobile app access",
+      "Access to all basic courses",
+      "Progress tracking",
+      "Mobile learning support",
+      "Course completion certificates",
+      "Community forum access",
     ],
   },
   {
-    name: "Pro",
-    monthlyPrice: 999,
-    yearlyPrice: 9999,
-    description: "Ideal for growing businesses",
+    name: "Professional",
+    monthlyPrice: 799,
+    yearlyPrice: 7999,
+    description: "Ideal for career advancement",
     features: [
-      "Up to 20 team members",
-      "Advanced project management",
-      "50 GB storage",
-      "Priority email & chat support",
-      "Custom integrations",
+      "Everything in Student plan",
+      "Advanced specialization courses",
+      "Live mentorship sessions",
+      "Career guidance support",
+      "Industry project reviews",
+      "Priority support response",
+      "LinkedIn certification",
+    ],
+  },
+  {
+    name: "Creator",
+    monthlyPrice: 1999,
+    yearlyPrice: 19999,
+    description: "For course creators and institutions",
+    features: [
+      "Everything in Professional plan",
+      "Course creation tools",
       "Analytics dashboard",
-    ],
-  },
-  {
-    name: "Enterprise",
-    monthlyPrice: 2499,
-    yearlyPrice: 24999,
-    description: "For large organizations with complex needs",
-    features: [
-      "Unlimited team members",
-      "Advanced project & resource management",
-      "500 GB storage",
-      "24/7 phone, email & chat support",
-      "Custom integrations & API access",
-      "Advanced analytics & reporting",
-      "Dedicated account manager",
+      "Custom branding options",
+      "Revenue sharing (80/20)",
+      "Marketing tools & support",
+      "Dedicated success manager",
+      "API access",
     ],
   },
 ]
@@ -64,9 +66,11 @@ export default function PricingPage() {
         className="text-center mb-12"
       >
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl md:text-6xl">
-          Simple, transparent pricing
+          Choose Your Learning Journey
         </h1>
-        <p className="mt-4 text-xl text-gray-600 dark:text-gray-300">Choose the plan that's right for your business</p>
+        <p className="mt-4 text-xl text-gray-600 dark:text-gray-300">
+          Flexible plans to support your educational goals
+        </p>
       </motion.div>
 
       <motion.div
@@ -77,7 +81,7 @@ export default function PricingPage() {
       >
         <span className="mr-3 text-sm font-medium">Monthly</span>
         <Switch checked={isYearly} onCheckedChange={setIsYearly} className="data-[state=checked]:bg-blue-600" />
-        <span className="ml-3 text-sm font-medium">Yearly (Save 15%)</span>
+        <span className="ml-3 text-sm font-medium">Yearly (Save 20%)</span>
       </motion.div>
 
       <div className="grid gap-8 lg:grid-cols-3">
@@ -88,7 +92,7 @@ export default function PricingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
           >
-            <Card className="flex flex-col h-full">
+            <Card className={`flex flex-col h-full ${index === 1 ? "border-blue-200 shadow-lg" : ""}`}>
               <CardHeader>
                 <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
                 <CardDescription>{plan.description}</CardDescription>
@@ -116,8 +120,8 @@ export default function PricingPage() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full" variant={index === 1 ? "default" : "outline"}>
-                  Get started
+                <Button className="w-full" variant={index === 1 ? "default" : "outline"} size="lg">
+                  {index === 2 ? "Contact Sales" : "Start Learning"}
                 </Button>
               </CardFooter>
             </Card>
@@ -129,15 +133,25 @@ export default function PricingPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.8 }}
-        className="mt-12 text-center"
+        className="mt-12 text-center space-y-4"
       >
+        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 max-w-2xl mx-auto">
+          <h3 className="text-lg font-semibold mb-2">Education Partner Program</h3>
+          <p className="text-gray-600 dark:text-gray-300">
+            Are you an educational institution? Get special pricing and features with our partner program.
+          </p>
+          <Button variant="link" className="mt-2">
+            Learn more about partnerships →
+          </Button>
+        </div>
+
         <p className="text-gray-600 dark:text-gray-300">
-          All plans include a 14-day free trial. No credit card required.
+          All plans include a 7-day free trial. No credit card required.
         </p>
-        <p className="mt-2 text-gray-600 dark:text-gray-300">
-          Need a custom plan?{" "}
+        <p className="text-gray-600 dark:text-gray-300">
+          Need a custom enterprise solution?{" "}
           <a href="#" className="text-blue-600 hover:underline">
-            Contact us
+            Let's talk
           </a>
         </p>
       </motion.div>
