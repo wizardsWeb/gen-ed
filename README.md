@@ -1,4 +1,4 @@
-# Edify AI
+# Gen-ed AI
 
 _Revolutionizing Education with AI-Powered Courses, Immersive AR Classrooms, and Powerful Career Tools_
 <!-- 3D Bot Animation -->
