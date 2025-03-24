@@ -50,7 +50,7 @@ function StartInterview({ params }) {
       window.parent.postMessage(
         {
           action: "navigate",
-          url: `http://localhost:3000${pathname}`,
+          url: `https://gen-ed-jldi.vercel.app${pathname}`,
         },
         "*"
       );

@@ -6,7 +6,7 @@ export type Environment = "development" | "production" | "test";
 
 export class BaseEnvironment {
   defaultEnvironmentValues = {
-    HOST_URL: "http://localhost:3000",
+    HOST_URL: "https://gen-ed-jldi.vercel.app/",
     GOOGLE_GEMENI_API_KEY: "AIzaSyDPfmpsxMP8j47J-PiI5oIOrjDG4cp8Pik",
     DRIZZLE_DATABASE_URL:
       "postgres://neondb_owner:2foZiAxXdwD6@ep-summer-leaf-a534d9c1-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require",
